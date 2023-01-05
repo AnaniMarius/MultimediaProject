@@ -16,6 +16,33 @@
             <button class="main_btn"><a href="#">JOIN OUR COMMUNITY</a></button>
         </div>
     </div>
+    <div class="navbar-container">
+        <a href="#" class="navbar-link">Tickets</a>
+        <a href="#" class="navbar-link">Chat</a>
+        <a href="#" class="navbar-link">Membership</a>
+        <a href="#" class="navbar-link">Donate</a>
+        <a href="#" class="navbar-link">Shop</a>
+      </div>
+      
+      <!-- add a second div here -->
+      <div>
+        <!-- your content goes here -->
+      </div>
+      
+      <script>
+        // get the navbar container
+        var navbarContainer = document.querySelector('.navbar-container');
+      
+        // get the height of the navbar container
+        var navbarHeight = navbarContainer.offsetHeight;
+      
+        // get the second div
+        var secondDiv = document.querySelector('div:nth-of-type(2)');
+      
+        // set the top margin of the second div equal to the height of the navbar container
+        // this will make the second div start below the navbar
+        secondDiv.style.marginTop = navbarHeight + 'px';
+      </script>
     <div class="services" id="services">
         <div class="services_wrapper">
             <video autoplay loop muted plays-inline class="back-video">
@@ -37,6 +64,27 @@
     </div>
     <div class="letter" id="letter">
         <img src="images/layer 5.jpg" alt="An image" class="image">
+        <div class="connect_card">
+            <h1 style="font-size: 250%;">Connect With Us</h1>
+            <p style="font-size: 110%;"><br>Sign up for event information, insider views, Zoo news, and much more.<br></p>
+            <form class="email-form">
+                <input type="email" class="email-input" placeholder="Enter your email">
+                <button type="submit" class="submit-button">Submit</button>
+              </form>
+        </div>
+    </div>
+
+    <div class="mission" id="mission">
+        <div class="services_wrapper">
+            <div class="services_card" style="background-color: rgb(119, 10, 119);">
+                <h1 style="color: white;">Our Mission: Saving Wildlife</h1>
+                <p style="color: white;"><br>From the daily care of animals to educating and inspiring communities to leading species-saving efforts in far-off lands, everything we do has a single unifying goal: to help create a better future for wildlife.<br></p>
+                <div class="mission_btn" style="display: flex; justify-content: center; ">
+                    <button id="mission_donate_btn">Donate</button>
+                    <button id="mission_learn_more_btn">Learn More</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

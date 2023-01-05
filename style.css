@@ -143,11 +143,6 @@
 }
 
 .services_card {
-    /* height: 425px;
-    width: 500px;
-    color:black;
-    background-color: white;
-    position: relative; */
     margin: 10px;
     border-radius: 4px;
     display: flex;
@@ -205,13 +200,14 @@
     left: 0;
     width: 0;
     height: 100%;
-    transition: background-color 0.3s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* transition: background-color 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.3); */
     color: white;
     border-radius: 4px;
 }
 
 #announcement_btn:hover {
+    background-color: rgb(2, 84, 15);
     color: white;
 }
 
@@ -249,228 +245,179 @@
     position: relative;
 }
 .image {
-    /* position: absolute;
-    object-fit: cover;
-    right: 0%;
-    top:120%;
-    width: 50%;
-    height: 70%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
     position: absolute;
     object-fit: cover;
     max-width: 100%;
     max-height: 100%;
     top: 0;
     right: 0;
+    bottom: 0;
+  }
+.connect_card{
+    margin: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 47%;
+    left: 20%;
+    color: black;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: hidden;
+    max-width: 450px;
+    padding: 15px;
+}
+
+@media(min-aspect-ratio:16/9) {
+    .connect_card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(min-aspect-ratio:16/9) {
+    .connect_card {
+        width: auto;
+        height: 50%;
+    }
+}
+
+.email-form {
+    display: flex;
+    margin: 35px;
+  }
+
+  .email-input {
+    flex: 1;
+    border: 2px solid black;
+    height: 38px;
+    padding: 0 10px;
+  }
+
+  .submit-button {
+    width: 120px;
+    height: 38px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    border-left: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .submit-button:hover {  
+    background-color: green;
+    color: white;
   }
 
 
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    aspect-ratio: 16/9;
-}
-
-#main-page {
+  /* create a fixed position container for the navbar */
+  .navbar-container {
+    z-index: 5;
     position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    aspect-ratio: 16/9;
-}
-
-.layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    z-index: 0;
-    aspect-ratio: 16/9;
-}
-
-#layer-1 {
-    background-image: url(images/7566583.jpg);
-    width: 100%;
-    height: 12%;
-    z-index: -1;
-    aspect-ratio: 16/9;
-}
-
-#layer-2 {
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    height: 98%;
-    z-index: -2;
-    aspect-ratio: 16/9;
-}
-
-#layer-3 {
-    background-color: rgb(123, 41, 224);
-    width: 100%;
-    height: 210%;
-    z-index: -3;
-    aspect-ratio: 16/9;
-}
-
-#layer-4 {
-    background-color: rgb(29, 119, 44);
-    width: 100%;
-    height: 235%;
-    z-index: -4;
-    aspect-ratio: 16/9;
-}
-
-#layer-5 {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 315%;
-    z-index: -5;
-    aspect-ratio: 16/9;
-}
-
-#layer-6 {
-    background-color: rgb(111, 101, 101);
-    width: 100%;
-    height: 390%;
-    z-index: -6;
-    aspect-ratio: 16/9;
-}
-
-#layer-7 {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 488%;
-    z-index: -7;
-    aspect-ratio: 16/9;
-}
-
-#layer-8 {
-    background-color: rgb(146, 34, 156);
-    width: 100%;
-    height: 588%;
-    z-index: -8;
-    aspect-ratio: 16/9;
-}
-
-#upButton-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5vh;
-    flex-wrap: wrap;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
     right: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-#upButton {
-    background-color: transparent;
-    color: rgb(234, 242, 122);
-    margin: 3vh;
-    border: 0;
-    border-radius: 10px;
-    width: 7%;
-    height: 45%;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-#upButton:before {
-    content: '';
-    display: inline;
-    height: 50px;
-    background-color: white;
-}
-
-#upButton:hover {
-    background-color: black;
-    color: white;
-    transition: background-color 0.3s ease-in-out;
-}
-
-#mainButton:before {
-    content: '';
-    display: inline;
-    height: 50px;
-    background-color: white;
-}
-
-#mainButton:hover {
-    color: rgb(234, 242, 122);
-    transition: background-color 0.3s ease-in-out;
-}
-
-#mainButton {
-    background-image: url('');
-    background-position: left top;
-    background-color: transparent;
-    color: white;
-    margin: 2vh;
-    border: 0;
-    border-radius: 10px;
-    width: 14%;
-    height: 7%;
-    font-size: 19px;
-    font-weight: bold;
-}
-
-
-video {
-    left: 20%;
-    top: 20%;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-}
-
-.textOverlay2 {
-    position: absolute;
-    width: 260px;
-    height: 100px;
-    top: 30%;
-    left: 15%;
-    transform: translate(-40%, -40%);
-    color: black;
-    text-align: center;
-    overflow: hidden;
-}
-
-.text-box2 {
-    background-color: white;
-    padding: 20px;
-}
-
-.readMore2 {
-    background-color: rgb(5, 87, 5);
-    color: white;
-    margin: 10px;
-    border: 0;
-    border-radius: 10px;
+    height: 200px;
     width: 100px;
-    height: 40px;
-    font-size: 14px;
-    font-weight: bold;
-}
+    overflow-y: auto;  /* add scrollbars if the content is taller than the container */
+    background-color: rgb(137, 38, 187);
+  }
 
-.readMore2:before {
-    content: '';
-    display: inline;
-    height: 50px;
-    background-color: white;
-}
-
-.readMore2:hover {
-    background-color: black;
+  /* style the navbar links */
+  .navbar-link {
+    display: block;
+    padding: 10px;
     color: white;
-    transition: background-color 0.3s ease-in-out;
-} */
+    text-decoration: none;
+  }
+
+  .navbar-link:hover {
+    background-color: rgb(98, 26, 133);
+    transition: all 0.3s ease;
+  }
+  @media only screen and (max-width: 1300px) {
+  /* change the navbar to a horizontal layout */
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  /* make the navbar fixed to the bottom of the screen */
+  .navbar-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* adjust the height of the navbar */
+  .navbar-container {
+    height: 50px;
+  }
+  
+  /* adjust the styling of the navbar links */
+  .navbar-link {
+     text-align: center; /* add this line */
+    font-size: 18px;
+    color: white;
+    bottom: 0;
+  }
+}
+
+
+.mission {
+    background: rgb(114, 114, 112);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 69%;
+    padding: 10rem 0;
+    position: relative;
+}
+
+
+
+  #mission_donate_btn {
+    font-size: 0.9rem;
+    background-color: white; margin: 0 5px;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 16px;
+    color: rgb(0, 112, 4);
+}
+#mission_donate_btn:hover {  
+    background-color: rgb(0, 112, 4);
+    color: white;
+    
+  }
+#mission_learn_more_btn {
+    font-size: 0.9rem;
+    background-color: transparent;  border: 2px solid white; margin: 0 5px;
+    padding: 10px 5px;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 16px;
+    color: rgb(174, 255, 0);
+}
+#mission_learn_more_btn:hover {  
+    background-color: white;
+    color: rgb(0, 0, 0);
+
+  }
