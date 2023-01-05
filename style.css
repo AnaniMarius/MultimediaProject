@@ -85,12 +85,14 @@
     color: rgb(255, 232, 57);
     text-decoration: none;
 }
+
 .main_btn_center a:hover {
     position: relative;
     z-index: 2;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
+
 .main_btn_center:after {
     position: absolute;
     content: '';
@@ -214,6 +216,7 @@
 #announcement_btn:hover:after {
     width: 100%;
 }
+
 #announcement_btn b {
     position: relative;
     z-index: 2;
@@ -244,6 +247,7 @@
     padding: 17rem 0;
     position: relative;
 }
+
 .image {
     position: absolute;
     object-fit: cover;
@@ -252,8 +256,9 @@
     top: 0;
     right: 0;
     bottom: 0;
-  }
-.connect_card{
+}
+
+.connect_card {
     margin: 10px;
     border-radius: 4px;
     display: flex;
@@ -291,16 +296,16 @@
 .email-form {
     display: flex;
     margin: 35px;
-  }
+}
 
-  .email-input {
+.email-input {
     flex: 1;
     border: 2px solid black;
     height: 38px;
     padding: 0 10px;
-  }
+}
 
-  .submit-button {
+.submit-button {
     width: 120px;
     height: 38px;
     border: 2px solid black;
@@ -310,65 +315,86 @@
     font-size: 14px;
     font-weight: bold;
     transition: background-color 0.2s ease-in-out;
-  }
-  .submit-button:hover {  
+}
+
+.submit-button:hover {
     background-color: green;
     color: white;
-  }
+}
 
 
-  /* create a fixed position container for the navbar */
-  .navbar-container {
+/* create a fixed position container for the navbar */
+.navbar-container {
     z-index: 5;
     position: fixed;
     right: 0;
     height: 200px;
     width: 100px;
-    overflow-y: auto;  /* add scrollbars if the content is taller than the container */
+    overflow-y: auto;
+    /* add scrollbars if the content is taller than the container */
     background-color: rgb(137, 38, 187);
-  }
+}
 
-  /* style the navbar links */
-  .navbar-link {
+/* style the navbar links */
+.navbar-link {
     display: block;
     padding: 10px;
     color: white;
     text-decoration: none;
-  }
+}
 
-  .navbar-link:hover {
+.navbar-link:hover {
     background-color: rgb(98, 26, 133);
     transition: all 0.3s ease;
-  }
-  @media only screen and (max-width: 1300px) {
-  /* change the navbar to a horizontal layout */
-  .navbar-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  /* make the navbar fixed to the bottom of the screen */
-  .navbar-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  /* adjust the height of the navbar */
-  .navbar-container {
-    height: 50px;
-  }
-  
-  /* adjust the styling of the navbar links */
-  .navbar-link {
-     text-align: center; /* add this line */
-    font-size: 18px;
-    color: white;
-    bottom: 0;
-  }
 }
+
+@media only screen and (max-width: 1300px) {
+
+    /* change the navbar to a horizontal layout */
+    .navbar-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /* make the navbar fixed to the bottom of the screen */
+    .navbar-container {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* adjust the height of the navbar */
+    .navbar-container {
+        height: 50px;
+    }
+
+    /* adjust the styling of the navbar links */
+    .navbar-link {
+        text-align: center;
+        /* add this line */
+        font-size: 18px;
+        color: white;
+        bottom: 0;
+    }
+}
+
+::selection {
+    color: white;
+    background: rgb(0, 101, 0);
+}
+
+::-moz-selection {
+    color: white;
+    background: rgb(0, 101, 0);
+}
+
+::-webkit-selection {
+    color: white;
+    background: rgb(0, 101, 0);
+}
+
 
 
 .mission {
@@ -384,9 +410,10 @@
 
 
 
-  #mission_donate_btn {
+#mission_donate_btn {
     font-size: 0.9rem;
-    background-color: white; margin: 0 5px;
+    background-color: white;
+    margin: 0 5px;
     padding: 10px 5px;
     border: none;
     border-radius: 4px;
@@ -398,14 +425,18 @@
     font-size: 16px;
     color: rgb(0, 112, 4);
 }
-#mission_donate_btn:hover {  
+
+#mission_donate_btn:hover {
     background-color: rgb(0, 112, 4);
     color: white;
-    
-  }
+
+}
+
 #mission_learn_more_btn {
     font-size: 0.9rem;
-    background-color: transparent;  border: 2px solid white; margin: 0 5px;
+    background-color: transparent;
+    border: 2px solid white;
+    margin: 0 5px;
     padding: 10px 5px;
     border-radius: 4px;
     margin-top: 2rem;
@@ -416,8 +447,20 @@
     font-size: 16px;
     color: rgb(174, 255, 0);
 }
-#mission_learn_more_btn:hover {  
+
+#mission_learn_more_btn:hover {
     background-color: white;
     color: rgb(0, 0, 0);
 
-  }
+}
+
+.condorImage {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
