@@ -118,7 +118,7 @@
     right: 0;
     bottom: 0;
 }
-@media(min-aspect-ratio:16/9){
+/* @media(min-aspect-ratio:16/9){
     .back-video{
         width: 100%;
         height: auto;
@@ -129,18 +129,12 @@
         width: auto;
         height: 100%;
     }
-}
+} */
 .services_wrapper{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 }
-
-/* .services_wrapper {
-    width: 640px;
-    height: 360px;
-    position: relative;
-  } */
   
 .services_card{
     margin: 10px;
