@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="saveWildLife.css">
+
+</head>
+
+
+<body>
+    <div class="hero" id="home">
+        <div class="hero_container">
+            <button class="main_btn"><a href="http://127.0.0.1:5500/planYourVisit.html">PLAN YOUR VISIT</a></button>
+            <button class="main_btn"><a href="#">EXPLORE YOUR ZOO</a></button>
+            <button class="main_btn_center"><a href="http://127.0.0.1:5500/index.html">ASE ZOO</a></button>
+            <button class="main_btn"><a href="#">SAVE THE WILDLIFE</a></button>
+            <button class="main_btn"><a href="#">JOIN OUR COMMUNITY</a></button>
+        </div>
+    </div>
+    <div class="navbar-container">
+        <a href="#" class="navbar-link">Tickets</a>
+        <a href="#" class="navbar-link">Chat</a>
+        <a href="#" class="navbar-link">Membership</a>
+        <a href="#" class="navbar-link">Donate</a>
+        <a href="#" class="navbar-link">Shop</a>
+    </div>
+
+    <!-- add a second div here -->
+    <div>
+        <!-- your content goes here -->
+    </div>
+
+    <script>
+        // get the navbar container
+        var navbarContainer = document.querySelector('.navbar-container');
+
+        // get the height of the navbar container
+        var navbarHeight = navbarContainer.offsetHeight;
+
+        // get the second div
+        var secondDiv = document.querySelector('div:nth-of-type(2)');
+
+        // set the top margin of the second div equal to the height of the navbar container
+        // this will make the second div start below the navbar
+        secondDiv.style.marginTop = navbarHeight + 'px';
+    </script>
+    <div class="calendar" id="calendar">
+        <img src="images/joinCommunity.jpg" alt="An image" class="condorImage">
+    </div>
+    <div class="calendar" id="calendar" style="height: 100%;">
+        <div class="calendar_wrapper">
+            <div class="calendar_card" style="background-color: rgba(119, 10, 119, 0); height: 40%; width: 80%; max-width: 1200px; top:20%; text-align: left;">
+                <h1 style="color: black;">Join Our Community</h1>
+                <p style="font-size: 140%;"><br>The A.S.E. Zoo prides itself on being a place that is welcoming for everyone. We are dedicated to connecting people with nature and creating experiences that are accessible to all. If you love animals, enjoy nature, and want to support wildlife conservation, we invite you to join our A.S.E. Zoo family. There are many ways to become “part of the herd.”</p>
+                <button id="announcement_btn" style="width: 15%;">Read More</a></button>
+            </div>
+            <div class="calendar_card" style="background-color: rgba(17, 0, 17, 0); height: 40%; width: 80%; max-width: 1200px; top:60%; text-align: left;">
+                <h3 style="color: rgb(255, 157, 0);">OPEN VACANCIES:</h3>
+                <p style="font-size: 140%;"><br>Zoo tour guide.
+                    <br> Zookeeper.
+                    <br>Landscape gardener.
+                    <br>Volunteer coordinator.
+                    <br>Veterinarian technician.
+                    <br>Events manager.</p>
+                <button id="announcement_btn" style="width: 15%;">Contact</a></button>
+            </div>
+        </div>
+    </div>
+</body>

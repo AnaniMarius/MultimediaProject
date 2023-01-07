@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="tickets.css">
+
+</head>
+
+
+<body>
+    <div class="hero" id="home">
+        <div class="hero_container">
+            <button class="main_btn"><a href="http://127.0.0.1:5500/planYourVisit.html">PLAN YOUR VISIT</a></button>
+            <button class="main_btn"><a href="#">EXPLORE YOUR ZOO</a></button>
+            <button class="main_btn_center"><a href="http://127.0.0.1:5500/index.html">ASE ZOO</a></button>
+            <button class="main_btn"><a href="#">SAVE THE WILDLIFE</a></button>
+            <button class="main_btn"><a href="#">JOIN OUR COMMUNITY</a></button>
+        </div>
+    </div>
+    <div class="navbar-container">
+        <a href="#" class="navbar-link">Tickets</a>
+        <a href="#" class="navbar-link">Chat</a>
+        <a href="#" class="navbar-link">Membership</a>
+        <a href="#" class="navbar-link">Donate</a>
+        <a href="#" class="navbar-link">Shop</a>
+    </div>
+
+    <!-- add a second div here -->
+    <div>
+        <!-- your content goes here -->
+    </div>
+
+    <script>
+        // get the navbar container
+        var navbarContainer = document.querySelector('.navbar-container');
+
+        // get the height of the navbar container
+        var navbarHeight = navbarContainer.offsetHeight;
+
+        // get the second div
+        var secondDiv = document.querySelector('div:nth-of-type(2)');
+
+        // set the top margin of the second div equal to the height of the navbar container
+        // this will make the second div start below the navbar
+        secondDiv.style.marginTop = navbarHeight + 'px';
+    </script>
+    <div class="calendar" id="calendar">
+        <img src="images/tickets.jpg" alt="An image" class="condorImage">
+    </div>
+    <div class="calendar" id="calendar" style="height: 500%;">
+        <div class="calendar_wrapper">
+            <div class="calendar_card" style="background-color: rgba(119, 10, 119, 0); height: 40%; width: 80%; max-width: 1200px; top:5%; text-align: left;">
+                <h1 style="color: black;">Know Before You Go</h1>
+                <h3 style="color: rgb(255, 157, 0);"><br>MASK POLICY</h3>
+                <p style="font-size: 140%;"><br><strong>Face coverings are recommended for all guests</strong> aged 2 and older in indoor and enclosed public settings, including the LAIR, retail and food service locations, restrooms, and Safari Shuttle. Guests who are not fully vaccinated are recommended by the CDC to wear face coverings outside as well.
+                    <br><br>Our partner organization KultureCity has provided a video with mask tips for families and individuals within the sensory community; view it here.</p>
+            </div>
+            <div class="calendar_card" style="background-color: rgba(119, 10, 119, 0); height: 40%; width: 80%; max-width: 1200px; top:15%; text-align: left;">
+                <h3 style="color: rgb(255, 157, 0);"><br>TICKETING</h3>
+                <p style="font-size: 140%;"><br><strong>Advance online reservations are required for entry for general admission guests.</strong> Walk-up ticket sales are not recommended or guaranteed. Reciprocal and Military discounts are only available at the Zoo’s box office.
+                    <br><br>Please note, reserved tickets will be sent to the email address you provide. These tickets will be scanned from your mobile device or a printout at the entrance.
+                    <br><br>Last entry to the Zoo is at 3:45 p.m.
+                    <br><br>There are no refunds, exchanges, or rain checks. All ticket sales are final.</p>
+                <button id="announcement_btn" style="width: 15%;">Read More</a></button>
+            </div>
+            <div class="calendar_card" style="background-color: rgba(17, 0, 17, 0); height: 40%; width: 80%; max-width: 1200px; top:32%; text-align: left;">
+                <h1 style="color: black;">Keeping Everyone Safe and Healthy</h1>
+                <p style="font-size: 110%;"><br><strong>The health and safety of our guests, staff, and animals are our top priorities.</strong></p>
+                <br>
+                <h3 style="color: rgb(255, 157, 0);"><br>WHAT WE ARE DOING:</h3>
+                <ul>
+                    <br>
+                    <li style="font-size: 140%;">Zoo staff are required to wear protective face coverings and stay at home if they are experiencing any signs of illness.</li>
+                    <br>
+                    <li style="font-size: 140%;">Hand sanitizer stations are available at Safari Shuttle stops, food facilities, and other locations throughout the Zoo.</li>
+                </ul>
+                <br><br>
+                <h3 style="color: rgb(255, 157, 0);"><br>WHAT YOU NEED TO DO:</h3>
+                <br>
+                <ul>
+                    <li style="font-size: 140%;">For general admission guests, secure online reservations prior to your visit. Walk-up tickets sales are not recommended or guaranteed.</li>
+                    <li style="font-size: 140%;">If you feel sick or are experiencing symptoms such as cough, shortness of breath, fever, muscle aches, nausea or vomiting, diarrhea, loss of taste or smell, or any flu-like symptoms prior to visiting, please stay home.</li>
+                    <li style="font-size: 140%;">Face coverings are recommended for all guests aged 2 and older in indoor and/or enclosed public settings and businesses, including the LAIR, retail stores, Zoo Grill, restrooms, and Safari Shuttle. Those who are not fully vaccinated are recommended by the CDC to wear face coverings outdoors as well.</li>
+                    <li style="font-size: 140%;">To protect our community and animals, we recommend wearing a face covering and maintaining a physical distance of at least 6 feet between you and other Zoo staff and guests not in your party.</li>
+                    <li style="font-size: 140%;">Remember to wash your hands often, for at least 20 seconds, and do not touch your eyes, nose or mouth.</li>
+                </ul>
+                <button id="announcement_btn" style="width: 15%;">FAQ</a></button>
+            </div>
+        </div>
+    </div>
+</body>
