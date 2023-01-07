@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="planYourVisit.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+
+<body>
+    <div class="hero" id="home">
+        <div class="hero_container">
+            <button class="main_btn"><a href="http://127.0.0.1:5500/planYourVisit.html">PLAN YOUR VISIT</a></button>
+            <button class="main_btn"><a href="#">EXPLORE YOUR ZOO</a></button>
+            <button class="main_btn_center"><a href="http://127.0.0.1:5500/index.html">ASE ZOO</a></button>
+            <button class="main_btn"><a href="#">SAVE THE WILDLIFE</a></button>
+            <button class="main_btn"><a href="#">JOIN OUR COMMUNITY</a></button>
+        </div>
+    </div>
+    <div class="navbar-container">
+        <a href="#" class="navbar-link">Tickets</a>
+        <a href="#" class="navbar-link">Chat</a>
+        <a href="#" class="navbar-link">Membership</a>
+        <a href="#" class="navbar-link">Donate</a>
+        <a href="#" class="navbar-link">Shop</a>
+    </div>
+
+    <!-- add a second div here -->
+    <div>
+        <!-- your content goes here -->
+    </div>
+
+    <script>
+        // get the navbar container
+        var navbarContainer = document.querySelector('.navbar-container');
+
+        // get the height of the navbar container
+        var navbarHeight = navbarContainer.offsetHeight;
+
+        // get the second div
+        var secondDiv = document.querySelector('div:nth-of-type(2)');
+
+        // set the top margin of the second div equal to the height of the navbar container
+        // this will make the second div start below the navbar
+        secondDiv.style.marginTop = navbarHeight + 'px';
+    </script>
+    </div>
+    <div class="calendar" id="calendar">
+        <img src="images/planYourVisit/zooEntrance.jpg" alt="An image" class="condorImage">
+        <div class="calendar_wrapper">
+            <div class="calendar_card" style="background-color: rgba(119, 10, 119, 0);">
+                <form>
+                    <input class="form-control" type="datetime-local" placeholder="Select DateTime">
+                </form>
+                <div class="services_btn">
+                    <button onclick="window.location.href='/payment.html'" id="announcement_btn">Buy Ticket</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        config = {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        }
+        flatpickr("input[type=datetime-local]", config);
+    </script>
+</body>

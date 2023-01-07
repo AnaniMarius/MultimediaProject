@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="saveWildLife.css">
+
+</head>
+
+
+<body>
+    <div class="hero" id="home">
+        <div class="hero_container">
+            <button class="main_btn"><a href="http://127.0.0.1:5500/planYourVisit.html">PLAN YOUR VISIT</a></button>
+            <button class="main_btn"><a href="#">EXPLORE YOUR ZOO</a></button>
+            <button class="main_btn_center"><a href="http://127.0.0.1:5500/index.html">ASE ZOO</a></button>
+            <button class="main_btn"><a href="#">SAVE THE WILDLIFE</a></button>
+            <button class="main_btn"><a href="#">JOIN OUR COMMUNITY</a></button>
+        </div>
+    </div>
+    <div class="navbar-container">
+        <a href="#" class="navbar-link">Tickets</a>
+        <a href="#" class="navbar-link">Chat</a>
+        <a href="#" class="navbar-link">Membership</a>
+        <a href="#" class="navbar-link">Donate</a>
+        <a href="#" class="navbar-link">Shop</a>
+    </div>
+
+    <!-- add a second div here -->
+    <div>
+        <!-- your content goes here -->
+    </div>
+
+    <script>
+        // get the navbar container
+        var navbarContainer = document.querySelector('.navbar-container');
+
+        // get the height of the navbar container
+        var navbarHeight = navbarContainer.offsetHeight;
+
+        // get the second div
+        var secondDiv = document.querySelector('div:nth-of-type(2)');
+
+        // set the top margin of the second div equal to the height of the navbar container
+        // this will make the second div start below the navbar
+        secondDiv.style.marginTop = navbarHeight + 'px';
+    </script>
+    <div class="calendar" id="calendar">
+        <img src="images/deers.jpg" alt="An image" class="condorImage">
+    </div>
+    <div class="calendar" id="calendar" style="height: 100%;">
+        <div class="calendar_wrapper">
+            <div class="calendar_card" style="background-color: rgba(119, 10, 119, 0); height: 40%; width: 80%; max-width: 1200px; top:20%; text-align: left;">
+                <h1 style="color: black;">Save Wildlife</h1>
+                <p style="font-size: 140%;"><br>As a conservation organization, our goal is to shape a better future for wildlife, humans, and our shared world. It is the heart of who we are and what we do. From innovative animal care to inspiring personal connections; from education and advocacy to building and cultivating lasting partnerships rooted in equity; from leading conservation efforts throughout the world to empowering Romanians to connect to nature in their own spaces, our work is to conserve and protect the health and wellness of our shared planet for all. We are your A.S.E. ZOO.</p>
+            </div>
+            <div class="calendar_card" style="background-color: rgba(119, 10, 119, 0); height: 40%; width: 80%; max-width: 1200px; top:60%; text-align: left;">
+                <h1 style="color: black;">Conservation Strategic Plan</h1>
+                <p style="font-size: 140%;"><br>In 2021, the A.S.E. Zoo launched its first-ever Conservation Strategic Plan (CSP). Starting in Griffith Park and extending around the globe, we are expanding our efforts to protect species and the habitats we share by focusing on six key areas, strengthening our partnerships, and engaging our diverse communities. Join us to create a just and sustainable world where people and wildlife thrive, together.</p>
+                <button id="announcement_btn" style="width: 15%;">Read More</a></button>
+            </div>
+            <div class="calendar_card" style="background-color: rgba(17, 0, 17, 0); height: 40%; width: 80%; max-width: 1200px; top:100%; text-align: left;">
+                <h3 style="color: rgb(255, 157, 0);">CONSERVATION PROJECT AND PARTNER SPOTLIGHTS</h3>
+                <p style="font-size: 140%;"><br>As part of the CSP, we’ve introduced a new storytelling avenue for our communities to find and collect conservation information. With speakers representing experts from our conservation and community partners and our own A.S.E. Zoo, we believe it is important to share stories from their perspectives and hope to amplify their work to all of our communities.</p>
+                <button id="announcement_btn" style="width: 15%;">Read More</a></button>
+            </div>
+        </div>
+    </div>
+</body>

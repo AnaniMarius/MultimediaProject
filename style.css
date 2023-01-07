@@ -452,7 +452,6 @@
 #mission_learn_more_btn:hover {
     background-color: white;
     color: rgb(0, 0, 0);
-
 }
 
 .condorImage {
@@ -549,4 +548,23 @@
     max-width: 600px;
     padding: 15px;
 }
+.footer_text2{
+    margin: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 
+    width: 60%;
+    height: 10%;
+    position: absolute;
+    top: 82%;
+    left: 37%;
+    color: black;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    overflow: hidden;
+    max-width: 600px;
+    padding: 15px;
+}
