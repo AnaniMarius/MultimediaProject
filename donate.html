@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="saveWildLife.css">
+
+</head>
+
+
+<body>
+    <div class="hero" id="home">
+        <div class="hero_container">
+            <button class="main_btn"><a href="http://127.0.0.1:5500/planYourVisit.html">PLAN YOUR VISIT</a></button>
+            <button class="main_btn"><a href="#">EXPLORE YOUR ZOO</a></button>
+            <button class="main_btn_center"><a href="http://127.0.0.1:5500/index.html">ASE ZOO</a></button>
+            <button class="main_btn"><a href="http://127.0.0.1:5500/saveWildLife.html">SAVE THE WILDLIFE</a></button>
+            <button class="main_btn"><a href="http://127.0.0.1:5500/joinCommunity.html">JOIN OUR COMMUNITY</a></button>
+        </div>
+    </div>
+    <div class="navbar-container">
+        <a href="http://127.0.0.1:5500/tickets.html" class="navbar-link">Tickets</a>
+        <a href="#" class="navbar-link">Chat</a>
+        <a href="#" class="navbar-link">Membership</a>
+        <a href="http://127.0.0.1:5500/donate.html" class="navbar-link">Donate</a>
+        <a href="#" class="navbar-link">Shop</a>
+      </div>
+
+    <!-- add a second div here -->
+    <div>
+        <!-- your content goes here -->
+    </div>
+
+    <script>
+        // get the navbar container
+        var navbarContainer = document.querySelector('.navbar-container');
+
+        // get the height of the navbar container
+        var navbarHeight = navbarContainer.offsetHeight;
+
+        // get the second div
+        var secondDiv = document.querySelector('div:nth-of-type(2)');
+
+        // set the top margin of the second div equal to the height of the navbar container
+        // this will make the second div start below the navbar
+        secondDiv.style.marginTop = navbarHeight + 'px';
+    </script>
+    <div class="calendar" id="calendar">
+        <img src="images/donate.jpg" alt="An image" class="condorImage">
+    </div>
+    <div class="calendar" id="calendar" style="height: 100%;">
+        <div class="calendar_wrapper">
+            <div class="calendar_card" style="background-color: rgba(119, 10, 119, 0); height: 80%; width: 80%; max-width: 1200px; top:35%; text-align: left;">
+                <h1 style="color: black;">Donors</h1>
+                <h1 style="color: black;"><br>Become a part of our efforts to educate, inspire, and protect!</h1>
+                <p style="font-size: 140%;"><br>Seeing an exotic animal up close is both an educational and visceral experience – you see how they move, you hear a roar or a snort, and sometimes you can even smell them. You learn first-hand how important saving these creatures from extinction is, and helping our Zoo visitors to develop this environmental awareness, knowledge, and empathy is a top priority for us.</p>
+                <p style="font-size: 140%;"><br><b>But we can’t do this important work without your support.</b>
+                <p style="font-size: 140%;"><br><a href="#" style="color: green;">The Greater Los Angeles Zoo Association (GLAZA)</a> offers a variety of donor programs and opportunities that help us inspire our visitors, support species around the world, and provide you with some wonderful benefits. Be a part of something special and support this amazing community resource. See below for all of the ways to support your Los Angeles Zoo.
+                    <br><br>If you would like to talk with someone about giving, please call the Development Division at (323) 486-4253.
+                    <br><br>GLAZA respects the privacy of the personal information shared with us by our donors. <a href="#" style="color: green;">View Donor Privacy Policy ></a></p>
+            </div>
+            
+        </div>
+    </div>
+</body>

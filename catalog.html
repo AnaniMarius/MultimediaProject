@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="catalog.css">
+
+</head>
+
+
+<body>
+    <div class="hero" id="home">
+        <div class="hero_container">
+            <button class="main_btn"><a href="http://127.0.0.1:5500/planYourVisit.html">PLAN YOUR VISIT</a></button>
+            <button class="main_btn"><a href="#">EXPLORE YOUR ZOO</a></button>
+            <button class="main_btn_center"><a href="http://127.0.0.1:5500/index.html">ASE ZOO</a></button>
+            <button class="main_btn"><a href="http://127.0.0.1:5500/saveWildLife.html">SAVE THE WILDLIFE</a></button>
+            <button class="main_btn"><a href="http://127.0.0.1:5500/joinCommunity.html">JOIN OUR COMMUNITY</a></button>
+        </div>
+    </div>
+    <div class="navbar-container">
+        <a href="http://127.0.0.1:5500/tickets.html" class="navbar-link">Tickets</a>
+        <a href="#" class="navbar-link">Chat</a>
+        <a href="#" class="navbar-link">Membership</a>
+        <a href="http://127.0.0.1:5500/donate.html" class="navbar-link">Donate</a>
+        <a href="#" class="navbar-link">Shop</a>
+    </div>
+
+    <!-- add a second div here -->
+    <div>
+        <!-- your content goes here -->
+    </div>
+
+    <script>
+        // get the navbar container
+        var navbarContainer = document.querySelector('.navbar-container');
+
+        // get the height of the navbar container
+        var navbarHeight = navbarContainer.offsetHeight;
+
+        // get the second div
+        var secondDiv = document.querySelector('div:nth-of-type(2)');
+
+        // set the top margin of the second div equal to the height of the navbar container
+        // this will make the second div start below the navbar
+        secondDiv.style.marginTop = navbarHeight + 'px';
+    </script>
+    <div class="calendar" id="calendar">
+        <img src="images/alligator.jpg" alt="An image" class="condorImage">
+    </div>
+    <div class="calendar" id="calendar" style="height: 100%;">
+        <div class="calendar_wrapper">
+            <div class="calendar_card"
+                style="background-color: rgba(119, 10, 119, 0); height: 40%; width: 80%; max-width: 1200px; top:10%; text-align: center;">
+                <h1 style="color: black;">Take a look at what awaits you</h1>
+            </div>
+            <style>
+                .catalog {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .catalog a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: black;
+                }
+
+                .catalog img {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+            </style>
+
+            <br><br><br><br>
+            <div class="catalog" style="justify-content: center;">
+                <a href="alligators.html">
+                    <img src="alligator.jpg" alt="Alligator">
+                    <span>Alligators</span>
+                </a>
+                <a href="wolves.html">
+                    <img src="wolf.jpg" alt="Wolf">
+                    <span>Wolves</span>
+                </a>
+                <a href="zebras.html">
+                    <img src="zebra.jpg" alt="Zebra">
+                    <span>Zebras</span>
+                </a>
+                <a href="giraffes.html">
+                    <img src="Giraffes.jpg" alt="giraffes">
+                    <span>Giraffes</span>
+                </a>
+                <a href="chimpanzees.html">
+                    <img src="chimpanzees.jpg" alt="chimpanzees">
+                    <span>Chimpanzees</span>
+                </a>
+            </div>
+            <br><br>
+            <div class="catalog" style="justify-content: center;">
+                <a href="tigers.html">
+                    <img src="tigers.jpg" alt="tigers">
+                    <span>Tigers</span>
+                </a>
+                <a href="lions.html">
+                    <img src="lions.jpg" alt="lions">
+                    <span>Lions</span>
+                </a>
+                <a href="rhinos.html">
+                    <img src="rhinos.jpg" alt="rhinos">
+                    <span>Rhinos</span>
+                </a>
+                <a href="lynx.html">
+                    <img src="lynx.jpg" alt="lynx">
+                    <span>Lynx</span>
+                </a>
+                <a href="spiderMonkeys.html">
+                    <img src="spiderMonkeys.jpg" alt="spiderMonkeys">
+                    <span>Spider Monkeys</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>

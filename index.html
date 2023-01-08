@@ -11,7 +11,7 @@
     <div class="hero" id="home">
         <div class="hero_container">
             <button class="main_btn"><a href="http://127.0.0.1:5500/planYourVisit.html">PLAN YOUR VISIT</a></button>
-            <button class="main_btn"><a href="#">EXPLORE YOUR ZOO</a></button>
+            <button class="main_btn"><a href="http://127.0.0.1:5500/catalog.html">EXPLORE YOUR ZOO</a></button>
             <button class="main_btn_center"><a href="http://127.0.0.1:5500/index.html">ASE ZOO</a></button>
             <button class="main_btn"><a href="http://127.0.0.1:5500/saveWildLife.html">SAVE THE WILDLIFE</a></button>
             <button class="main_btn"><a href="http://127.0.0.1:5500/joinCommunity.html">JOIN OUR COMMUNITY</a></button>
@@ -21,29 +21,29 @@
         <a href="http://127.0.0.1:5500/tickets.html" class="navbar-link">Tickets</a>
         <a href="#" class="navbar-link">Chat</a>
         <a href="#" class="navbar-link">Membership</a>
-        <a href="#" class="navbar-link">Donate</a>
+        <a href="http://127.0.0.1:5500/donate.html" class="navbar-link">Donate</a>
         <a href="#" class="navbar-link">Shop</a>
-      </div>
-      
-      <!-- add a second div here -->
-      <div>
+    </div>
+
+    <!-- add a second div here -->
+    <div>
         <!-- your content goes here -->
-      </div>
-      
-      <script>
+    </div>
+
+    <script>
         // get the navbar container
         var navbarContainer = document.querySelector('.navbar-container');
-      
+
         // get the height of the navbar container
         var navbarHeight = navbarContainer.offsetHeight;
-      
+
         // get the second div
         var secondDiv = document.querySelector('div:nth-of-type(2)');
-      
+
         // set the top margin of the second div equal to the height of the navbar container
         // this will make the second div start below the navbar
         secondDiv.style.marginTop = navbarHeight + 'px';
-      </script>
+    </script>
     <div class="services" id="services">
         <div class="services_wrapper">
             <video autoplay loop muted plays-inline class="back-video">
@@ -51,9 +51,12 @@
             </video>
             <div class="services_card">
                 <h1>A.S.E. Zoo Lights: Animals Aglow</h1>
-                <p><br>Explore an immersive landscape filled with spectacular lantern sculptures of animals among blooming flowers, towering trees, and more for, a wildlife-centered experience that’s as inspiring as it is breathtaking.<br></p>
+                <p><br>Explore an immersive landscape filled with spectacular lantern sculptures of animals among
+                    blooming flowers, towering trees, and more for, a wildlife-centered experience that’s as inspiring
+                    as it is breathtaking.<br></p>
                 <div class="services_btn">
-                    <button id="announcement_btn"><b href="#">More Info</a></button>
+                    <button id="announcement_btn" onclick="window.location.href='/tickets.html'"><b
+                            href="http://127.0.0.1:5500/tickets.html">More Info</a></button>
                 </div>
             </div>
         </div>
@@ -68,11 +71,12 @@
         <img src="images/layer 5.jpg" alt="An image" class="image">
         <div class="connect_card">
             <h1 style="font-size: 250%;">Connect With Us</h1>
-            <p style="font-size: 110%;"><br>Sign up for event information, insider views, Zoo news, and much more.<br></p>
+            <p style="font-size: 110%;"><br>Sign up for event information, insider views, Zoo news, and much more.<br>
+            </p>
             <form class="email-form">
                 <input type="email" class="email-input" placeholder="Enter your email">
                 <button type="submit" class="submit-button">Submit</button>
-              </form>
+            </form>
         </div>
     </div>
 
@@ -81,39 +85,144 @@
         <div class="services_wrapper">
             <div class="services_card" style="background-color: rgb(119, 10, 119);">
                 <h1 style="color: white;">Our Mission: Saving Wildlife</h1>
-                <p style="color: white;"><br>From the daily care of animals to educating and inspiring communities to leading species-saving efforts in far-off lands, everything we do has a single unifying goal: to help create a better future for wildlife.<br></p>
+                <p style="color: white;"><br>From the daily care of animals to educating and inspiring communities to
+                    leading species-saving efforts in far-off lands, everything we do has a single unifying goal: to
+                    help create a better future for wildlife.<br></p>
                 <div class="mission_btn" style="display: flex; justify-content: center; ">
-                    <button id="mission_donate_btn">Donate</button>
-                    <button id="mission_learn_more_btn">Learn More</button>
+                    <button id="mission_donate_btn" onclick="window.location.href='/donate.html'">Donate</a></button>
+                    <button id="mission_learn_more_btn" onclick="window.location.href='/saveWildLife.html'">Learn
+                        More</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="mission" id="mission" style="height: 87%; background-color: white;">
-        <h1 style="font-size: 250%;">Be a good duckling and follow us</h1>
-        <!-- <div id="slideshow">
-            <div class="slide">
+        <div class="services_wrapper">
+            <div class="services_card" style="background-color: rgb(119, 10, 119); width: 80%; max-width: 800px; height: 100px; top: 10%; left: 48%; background-color: transparent;">
+                <h1 style="font-size: 250%;">Be a good duckling and follow us</h1>
+            </div>
+        </div>
+        <style>
+            .slideshow {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                margin: auto;
+            }
+
+            .slideshow img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+
+        <style>
+            .slideshow {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                margin: auto;
+            }
+
+            .slideshow .slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+            }
+
+            .slideshow .slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .slideshow .slide.active {
+                display: block;
+            }
+
+            .slideshow .prev,
+            .slideshow .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+
+            .slideshow .prev {
+                left: 20px;
+            }
+
+            .slideshow .next {
+                right: 20px;
+            }
+        </style>
+
+        <div class="slideshow">
+            <div class="slide active">
                 <img src="images/duckling/1.jpg">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/2.jpg">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/3.jpg">
-              </div>
-              <div class="slide">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/4.jpg">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/5.jpg">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/6.jpg">
-              </div>
-              <div class="slide">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/7.jpg">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/8.jpg">
+            </div>
+            <div class="slide">
                 <img src="images/duckling/9.jpg">
-              </div>
-        </div> -->
+            </div>
+            <div class="prev">&lt;</div>
+            <div class="next">&gt;</div>
+        </div>
+        <script>
+            var slideshow = document.querySelector('.slideshow');
+            var slides = slideshow.querySelectorAll('.slide');
+            var currentSlideIndex = 0;
+
+            function showSlide(index) {
+                slides[currentSlideIndex].classList.remove('active');
+                currentSlideIndex = index;
+                slides[currentSlideIndex].classList.add('active');
+            }
+
+            slideshow.querySelector('.prev').addEventListener('click', function () {
+                showSlide((currentSlideIndex - 1 + slides.length) % slides.length);
+            });
+
+            slideshow.querySelector('.next').addEventListener('click', function () {
+                showSlide((currentSlideIndex + 1) % slides.length);
+            });
+        </script>
     </div>
-    
+
 
     <div class="footer" id="mission" style="height: 90%; background-color: rgb(158, 0, 161);">
         <img src="images/pew2.jpg" style="z-index: 0;" alt="An image" class="condorImage">
-        
+
         <div class="services_wrapper">
             <div class="footer_title">
                 <h1 style="z-index: 1;color: white;top:0%;">THANKS TO OUR SPONSORS</h1>
@@ -140,8 +249,10 @@
             bottom: 0%;
             left: 82%;">
             <div class="footer_text1">
-                <h1 style="z-index: 1;color: white;font-size: 120%;">Music at the Zoo is made possible by the Ray and Vera Conniff Foundation.</h1>
-                <h1 style="z-index: 1;color: white;font-size: 120%;"><br><br>©2022 Greater Bucharest Zoo Association</h1>
+                <h1 style="z-index: 1;color: white;font-size: 120%;">Music at the Zoo is made possible by the Ray and
+                    Vera Conniff Foundation.</h1>
+                <h1 style="z-index: 1;color: white;font-size: 120%;"><br><br>©2022 Greater Bucharest Zoo Association
+                </h1>
                 <h1 style="z-index: 1;color: white;font-size: 120%;"><br>5333 Zoo Drive, Bucharest, CA 90027</h1>
                 <h1 style="z-index: 1;color: white;font-size: 120%;"><br>(323) 644-4200</h1>
             </div>
@@ -151,7 +262,8 @@
             bottom: 0%;
             left: 10%;">
             <div class="footer_text2">
-                <h1 style="z-index: 1;color: white;font-size: 120%;">The A.S.E. Zoo & Botanical Gardens is owned, operated, and maintained by the Academy of Economic Studies from Bucharest.</h1>
+                <h1 style="z-index: 1;color: white;font-size: 120%;">The A.S.E. Zoo & Botanical Gardens is owned,
+                    operated, and maintained by the Academy of Economic Studies from Bucharest.</h1>
             </div>
 
             <img src="images/footer/aza.svg" alt="An image" class="footerImages" style="top: 520px;

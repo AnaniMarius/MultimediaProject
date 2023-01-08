@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="alligators.css">
+
+</head>
+
+
+<body>
+
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            cursor: zoom-in;
+        }
+
+        .zoomed-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .zoomed-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+
+    <div class="gallery">
+        <img src="alligator1.jpg" alt="Alligator">
+        <img src="alligator2.jpg" alt="Alligator">
+        <img src="alligator3.jpg" alt="Alligator">
+        <!-- Add more images here -->
+    </div>
+
+    <div class="zoomed-image">
+        <img src="">
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.gallery img');
+        var zoomedImage = document.querySelector('.zoomed-image');
+        var zoomedImageImg = zoomedImage.querySelector('img');
+
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                zoomedImageImg.src = image.src;
+                zoomedImage.classList.add('active');
+            });
+        });
+
+        zoomedImage.addEventListener('click', function () {
+            zoomedImage.classList.remove('active');
+        });
+    </script>
+</body>

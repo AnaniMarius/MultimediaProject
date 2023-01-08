@@ -568,3 +568,23 @@
     max-width: 600px;
     padding: 15px;
 }
+
+.slideshow img.active {
+    z-index: 1;
+    animation: fadeInOut 5s linear;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
