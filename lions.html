@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="alligators.css">
+
+</head>
+
+
+<body>
+
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            cursor: zoom-in;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .zoomed-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0);
+            /* pointer-events: none; */
+            display: none; 
+        }
+
+        .zoomed-image.active {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: block;
+        }
+
+
+        .zoomed-image .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .zoomed-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1607274134639-043342705e6f?ixlib=rb-4.0.3&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Lion">
+        <img src="https://i.natgeofe.com/k/1d33938b-3d02-4773-91e3-70b113c3b8c7/lion-male-roar_square.jpg" alt="Lion">
+        <img src="https://i.guim.co.uk/img/media/19e048685db029092e5999e0b393e8318dacf87b/130_238_4779_2867/master/4779.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=bb7708957e0e5876467c4e4751f31cee" alt="Lion">
+        <img src="https://www.inspiresafaris.com/wp-content/uploads/2022/01/lions.jpg" alt="Lion">
+        <img src="https://cdn.pixabay.com/photo/2015/09/22/14/34/lion-951778__340.jpg" alt="Lion">
+        <img src="https://static.scientificamerican.com/blogs/cache/file/213066DD-02AB-4054-8B9E533F108218FD_source.jpg?w=590&h=800&5E75D472-9EA9-4C26-908553D0D877CEF0" alt="Lion">
+        <img src="https://images.news18.com/ibnlive/uploads/2021/08/1628569083_lions-1200x800.jpg" alt="Lion">
+        <img src="https://img.freepik.com/free-photo/male-lion-standing-bush-field_181624-9808.jpg?w=2000" alt="Lion">
+        <img src="https://images.unsplash.com/photo-1544211393-7fdc8fca9f4f?ixlib=rb-4.0.3&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Lion">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/23/2018/11/GettyImages-147521071-21681d8.jpg?quality=90&crop=197px,46px,2453px,1634px&resize=980,654" alt="Lion">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/221015122234-ukraine-rescued-lion-colorado.jpg?c=original" alt="Lion">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/221101235437-02-taronga-zoo-escaped-lions.jpg?c=original" alt="Lion">
+    </div>
+
+    <div class="zoomed-image">
+        <img src="">
+        <div class="close">&times;</div>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.gallery img');
+        var zoomedImage = document.querySelector('.zoomed-image');
+        var zoomedImageImg = zoomedImage.querySelector('img');
+
+        zoomedImage.querySelector('.close').addEventListener('click', function () {
+            zoomedImage.classList.remove('active');
+        });
+
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                zoomedImageImg.src = image.src;
+                zoomedImage.classList.add('active');
+            });
+        });
+
+        zoomedImage.addEventListener('click', function () {
+            zoomedImage.classList.remove('active');
+            zoomedImageImg.src = "";
+        });
+    </script>
+</body>

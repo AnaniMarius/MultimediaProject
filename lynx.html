@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="alligators.css">
+
+</head>
+
+
+<body>
+
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            cursor: zoom-in;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .zoomed-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0);
+            /* pointer-events: none; */
+            display: none; 
+        }
+
+        .zoomed-image.active {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: block;
+        }
+
+
+        .zoomed-image .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .zoomed-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+
+    <div class="gallery">
+        <img src="https://rewildingbritain.imgix.net/images/RE_Lynx_X2.c84dfa4a4c9f82947ef313532da001f9.jpg?auto=format&crop=focalpoint&domain=rewildingbritain.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=630&ixlib=php-3.3.1&q=82&usm=20&w=1200" alt="Lynx">
+        <img src="https://www.parczoologiquedeparis.fr/sites/parczoologiquedeparis/files/thumbnails/image/fg4_9903_c_f-g_grandin_mnhn.jpg" alt="Lynx">
+        <img src="https://i.ytimg.com/vi/YjPHR2uHbds/maxresdefault.jpg" alt="Lynx">
+        <img src="https://a-z-animals.com/media/2022/02/shutterstock_1909404106.jpg" alt="Lynx">
+        <img src="https://www.dartmoorzoo.org.uk/wp-content/uploads/2020/10/Carpathian-Lynx-1.png" alt="Lynx">
+        <img src="https://www.rsb.org.uk/images/biologist/2021/68.3.Summer.June/REsizedOnlineImages/Lynx1.jpg" alt="Lynx">
+        <img src="https://www.whitemarmotte.com/wp-content/uploads/2020/06/lynx_head.jpg" alt="Lynx">
+        <img src="https://images.theconversation.com/files/407717/original/file-20210622-23-1xppc82.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="Lynx">
+        <img src="https://www.euronatur.org/fileadmin/images/Arten/Grosse_Beutegreifer/Luchs/Luchs.jpg" alt="Lynx">
+        <img src="https://awionline.org/sites/default/files/styles/art/public/case/image/canadalynx_flickr_Eric%20Kilby_banner.jpg?itok=HFpFDCZ6" alt="Lynx">
+        <img src="https://rewildingbritain.imgix.net/images/Lynx1_SS_115621942.jpg?auto=format&crop=focalpoint&domain=rewildingbritain.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=1125&ixlib=php-3.3.1&q=82&usm=20&w=2000" alt="Lynx">
+        <img src="https://www.nrcm.org/wp-content/uploads/2007/01/Canada-Lynx.jpg" alt="Lynx">
+    </div>
+
+    <div class="zoomed-image">
+        <img src="">
+        <div class="close">&times;</div>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.gallery img');
+        var zoomedImage = document.querySelector('.zoomed-image');
+        var zoomedImageImg = zoomedImage.querySelector('img');
+
+        zoomedImage.querySelector('.close').addEventListener('click', function () {
+            zoomedImage.classList.remove('active');
+        });
+
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                zoomedImageImg.src = image.src;
+                zoomedImage.classList.add('active');
+            });
+        });
+
+        zoomedImage.addEventListener('click', function () {
+            zoomedImage.classList.remove('active');
+            zoomedImageImg.src = "";
+        });
+    </script>
+</body>

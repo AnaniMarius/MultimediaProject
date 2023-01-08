@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Zoo Catalogue</title>
+    <link rel="stylesheet" href="alligators.css">
+
+</head>
+
+
+<body>
+
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            cursor: zoom-in;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .zoomed-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0);
+            /* pointer-events: none; */
+            display: none; 
+        }
+
+        .zoomed-image.active {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: block;
+        }
+
+
+        .zoomed-image .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .zoomed-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+
+    <div class="gallery">
+        <img src="https://cdn.pixabay.com/photo/2021/03/03/14/55/rhino-6065480__480.jpg" alt="Rhinos">
+        <img src="https://www.woburnsafari.co.uk/globalassets/woburn-safari/2.-images/road-safari/reserves/rhinos/rhino-kaj-desktop.jpg?w=1440" alt="Rhinos">
+        <img src="https://files.worldwildlife.org/wwfcmsprod/images/White_Rhino/hero_small/3yuabfu3jq_white_rhino_42993643.jpg" alt="Rhinos">
+        <img src="https://gdb.voanews.com/8018d022-59d5-4b71-b92d-0b6987c67279_cx0_cy10_cw0_w1080_h608.jpg" alt="Rhinos">
+        <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/10CE3/production/_111753886_najin_fencedoff_gettyimages-1163345273.jpg" alt="Rhinos">
+        <img src="https://panthera.org/sites/default/files/blog-post-images/Rhino_CreditJohnGoodrich.jpg" alt="Rhinos">
+        <img src="https://www.zoo.org/image/npg-2017/content-images/2018-Taj-Rhino-Pool.jpg" alt="Rhinos">
+        <img src="https://ychef.files.bbci.co.uk/976x549/p0bglr0h.jpg" alt="Rhinos">
+        <img src="https://psmag.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTQ3Njg1NDQ1MTM4OTE2OTcz/gettyimages-88918542.jpg" alt="Rhinos">
+        <img src="http://archive.indiaspend.com/wp-content/uploads/rhino_620.jpg" alt="Rhinos">
+        <img src="https://i.natgeofe.com/n/196e348a-608e-478f-8af1-132a179cb5a8/6132646_16x9.jpg" alt="Rhinos">
+        <img src="https://cdn1.byjus.com/wp-content/uploads/2021/03/rhino-4418780_1280-700x466.jpg" alt="Rhinos">
+    </div>
+
+    <div class="zoomed-image">
+        <img src="">
+        <div class="close">&times;</div>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.gallery img');
+        var zoomedImage = document.querySelector('.zoomed-image');
+        var zoomedImageImg = zoomedImage.querySelector('img');
+
+        zoomedImage.querySelector('.close').addEventListener('click', function () {
+            zoomedImage.classList.remove('active');
+        });
+
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                zoomedImageImg.src = image.src;
+                zoomedImage.classList.add('active');
+            });
+        });
+
+        zoomedImage.addEventListener('click', function () {
+            zoomedImage.classList.remove('active');
+            zoomedImageImg.src = "";
+        });
+    </script>
+</body>
